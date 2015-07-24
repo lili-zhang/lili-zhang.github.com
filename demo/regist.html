@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>报名</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>2015年中国通信行业发展大会</h2>
+        <small>会议时间：2015年4月25日    会议地点：北京(详情另行通知）</small>
+        <div class="content">
+            <p class="has-indent">为了推动创新、创造、创业的精神，贯彻《通信业“十二五”发展规划》的指示要求, 总结我国通信行业的发展成果，及时反映我国通信行业的最新趋势和动态，引导行业学习先进经验和方法，形成一批有特色、有国际竞争力的行业典范。由中国通信工业协会、中国通信行业发展大会组委会等共同组织2015年“中国通信行业发展大会暨中国通信工业100强企业、中国通信行业十大新闻、十大杰出人物、最具社会责任企业、最具成长性企业、最具影响力品牌和最佳产品创新奖”推选发布活动。</p>
+            <p class="has-indent">此次活动得到了主管单位工信部的大力支持与指导，大会作为国内高层次和最具权威性的通信行业经验交流盛会，将围绕通信业如何转变发展方式；如何推进通信业智能制造、智能产品、智能服务等先进模式，如何运用移动互联网、大数据、云计算等技术促进行业健康发展，如何破解我国通信业发展中面临的瓶颈问题，如何积极推进信息消费、实施“宽带中国”战略等；以及国内外通信行业未来发展趋势进行重点交流与探讨。</p>
+            <p>本次会议具体事项如下：</p>
+            <p class="title">一、会议主题“跨界·创新·互联·互通”</p>
+            <p class="title">二、会议出席人员</p>
+            <p>会议将邀请全国人大、全国政协等国家领导人出席；邀请工信部、发改委、商务部、科技部、环保部、财政部、国资委等有关领导出席；邀请行业专家、学者、管理专家、各企业主要负责人、跨国公司代表和新闻单位代表等参加。</p>
+            <p class="title">三、会议报到时间和地点</p>
+            <p>会议时间：2015年4月25日</p>
+            <p>会议地点：北京(详情另行通知）</p>
+            <p class="title">四、会议住宿</p>
+            <p>参加本次大会的每位代表收取会议费2980元，住宿统一安排，住宿费用自理。</p>
+            <p class="title">五、联系方式</p>
+            <p>联系人:尹伯卿 董娟 王丽 吴铮</p>
+            <p>电话：(010）68486668、57278005、57278006</p>
+            <p>传真：(010）68476635、68486668</p>
+            <p>电子信箱：txgyxh@126.com</p>
+            <p>地址：北京市海淀区杏石口路甲23号</p>
+            <p>邮编：100095</p>
+        </div>
+    </div>
+    <div class="footer">
+        <a class="tel" href="tel://222">拨打热线</a>
+        <a class="btn small-btn" href="javascript:;">我要报名</a>
+    </div>
+    <a href="javascript:scroll(0,0)" id="back-to-top">顶部</a>
+    <!--弹层-->
+    <div class="bg"></div>
+    <div class="regist">
+        <em class="close">X</em>
+        <form action="" method="">
+            <div class="inputs">
+                <input type="text" placeholder="姓名"/>
+                <input type="text" placeholder="单位名称"/>
+                <input type="text" placeholder="职务"/>
+                <input type="text" placeholder="手机"/>
+                <input type="text" placeholder="邮箱"/>
+            </div>
+            <div class="submit-btn">
+                <button class="btn" type="submit">提交报名</button>
+            </div>
+        </form>
+    </div>
+    <!--弹层 end-->
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script>
+        $(function(){
+            $('.footer .small-btn').bind('click',function(){
+                showWin();
+            },false);
+            $('.bg').bind('click',function(){
+                hideWin();
+            },false);
+            $('.regist .close').bind('click',function(){
+                hideWin();
+            },false);
+
+            function showWin(){
+                $('html,body').css({height:'100%',overflow:'hidden'});
+                $('.regist').addClass('ani');
+                $('.bg').show();
+            }
+            function hideWin(){
+                $('html,body').css({height:'auto',overflow:'auto'});
+                $('.regist').removeClass('ani');
+                $('.bg').hide();
+            }
+        });
+    </script>
+</body>
+</html>
