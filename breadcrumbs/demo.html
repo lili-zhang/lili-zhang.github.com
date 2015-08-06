@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN" xml:lang="zh-CN">
+<head>
+    <title>面包屑</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <style>
+        *,body,div,li,span,s,i,a,ol,ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*steps*/
+        .steps {
+            overflow: hidden;
+            width: 713px;
+            margin-bottom: 20px;
+            padding: 7px 0 20px 0;
+            font-size: 15px;
+            font-family: "微软雅黑", Microsoft YaHei;
+            color: #fff;
+        }
+        .steps li {
+            float: left;
+            width: 230px;
+            height: 36px;
+            line-height: 36px;
+            _height: 28px;
+            _line-height: 28px;
+            _padding-top: 8px;
+            padding-left: 15px;
+            font-size: 15px;
+            color: #fff;
+            background: #bababa;
+        }
+        .steps li.reset {
+            padding-left: 35px;
+        }
+        .steps li em {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            line-height: 16px;
+            font-size: 12px;
+            color: #bababa;
+            background: url(steps.png) no-repeat;
+            _background: url(steps.gif) no-repeat;
+            font-style: normal;
+            text-align: center;
+        }
+        .arrow-db {
+            position: relative;
+        }
+        .arrow-db s, .arrow-db s i {
+            position: absolute;
+            font-size: 0;
+            line-height: 0;
+            width: 0;
+            height: 0;
+            border: 5px dashed transparent;
+        }
+        .steps .arrow-db s {
+            top: 50%;
+            right: -42px;
+            z-index: 1;
+            margin-top: -24px;
+            border-top-style: dashed;
+            border-top-color: transparent;
+            border-left-style: solid;
+            border-left-color: #fff;
+            border-width: 24px;
+        }
+        .steps .arrow-db i {
+            top: -18px;
+            left: -24px;
+            z-index: 4;
+            border-top-style: dashed;
+            border-top-color: transparent;
+            border-left-style: solid;
+            border-left-color: #bababa;
+            border-width: 18px;
+        }
+        .steps li.current {
+            color: #fff;
+            background: #e23739;
+        }
+        .steps li.current i {
+            border-left-color: #e23739;
+        }
+        .steps li.current em {
+            color: #e23739;
+        }
+    </style>
+</head>
+<body>
+    <ol class="steps">
+        <li class="arrow-db"><em>1</em>选择找回方式<s><i></i></s></li>
+        <li class="reset current"><em>2</em>重置密码</li>
+    </ol>
+</body>
+</html>
