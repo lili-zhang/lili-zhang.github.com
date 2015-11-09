@@ -1,0 +1,160 @@
+.top {
+    overflow: hidden;
+    padding: 10px;
+}
+.top .head {
+    float: left;
+    margin-top: 3px;
+}
+.top .head a {
+    display: block;
+}
+.top .items {
+    overflow: hidden;
+    padding: 12px 0 0 10px;
+    font-size: 1.2rem;
+    color: #666;
+}
+.top a {
+    color: #666;
+}
+.top .name {
+    margin-bottom: 10px;
+    color: #ff8500;
+}
+.top .name a {
+    color: #ff8500;
+}
+.box {
+    margin-bottom: 10px;
+}
+.box a {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    margin-top: 1px;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background: #fff;
+}
+.box a img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+/* 好友 */
+.friends {
+    position: relative;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
+.friends h3 {
+    height: 30px;
+    line-height: 30px;
+    padding:  0 10px;
+    font-size: 1.4rem;
+    color: #f36303;
+}
+.friends ul {
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.friends li {
+    margin: 0 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.friends li a {
+    display: block;
+    padding: 10px 0;
+}
+.friends li img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.friends li strong {
+    font-weight: normal;
+}
+.friends .total {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4rem;
+    color: #666;
+    text-align: center;
+}
+.letter {
+    position: fixed;
+    right: 0;
+    top: 44px;
+    z-index: 999;
+    width: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.photo-item {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+}
+.photo-item strong {
+    display: block;
+    width: 70px;
+    line-height: 60px;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+.photo-item span {
+    display: block;
+    width: 20px;
+}
+.photo-item button {
+    position: absolute;
+    right: 10px;
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 1.6rem;
+    color: #fff;
+    background: #ff8500;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.file {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 60px;
+    background: url(img/icon-img.png) no-repeat;
+    -webkit-background-size: 154px 60px;
+    background-size: 154px 60px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file img {
+    width: 100%;
+    height: 100%;
+}
