@@ -7,7 +7,6 @@
     <meta name="format-detection" content="email=no"/>
     <title>车主行程-行程预约－长途拼车</title>
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
-    <link href="css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/detail.css" rel="stylesheet" type="text/css"/>
 </head>
 <body class="bg">
@@ -45,84 +44,5 @@
             <strong>个人</strong>
         </a>
     </nav>
-    <script src="js/zepto.js"></script>
-    <script src="js/mobiscroll.custom-2.17.0.min.js"></script>
-    <script>
-        ;(function(){
-
-            $('.jsq .plus').bind('click',function(){
-                var num = parseInt($(this).parent().find('label').html());
-
-                if(num > 0){
-                    num = num - 1;
-                    $(this).parent().find('label').html(num);
-                }
-            });
-            $('.jsq .add').bind('click',function(){
-                var num = parseInt($(this).parent().find('label').html()),
-                        girl_num = parseInt($('.girl').html()),
-                        boy_num = parseInt($('.boy').html()),
-                        sum_num = girl_num+boy_num;
-
-                if(sum_num<4){
-                    if(num < 4){
-                        num = num + 1;
-                        $(this).parent().find('label').html(num);
-                    }
-                    sum_num = sum_num+1;
-                }else{
-                    alert('总人数不能超过4');
-                }
-            });
-
-            $('#treelist').mobiscroll().treelist({
-                theme: 'mobiscroll',
-                lang: 'zh',
-                display: 'bottom',
-                fixedWidth: [100,160,160],
-                placeholder: '明天(9月25日) 08:00',//默认值
-                labels: ['day', 'hour', 'seconds'],
-                formatResult: function (array) { //返回自定义格式结果
-                    var reg = /[\u4E00-\u9FA5]/g;
-                    var str;
-                    if(array[0]==1){
-                        str = GetDateStr(1);
-                    }else{
-                        str = GetDateStr(0);
-                    }
-                    return $('#treelist>li').eq(array[0]).children('span').text() + str + $('#treelist>li').eq(array[0]).find('.hours > li').eq(array[1]).find('span').text().replace(reg,'')+ ':'+ $('#treelist>li').eq(array[0]).find('.hours > li').eq(array[1]).find('.seconds > li').eq(array[2]).text().replace(reg,'');
-                }
-            });
-
-            function GetDateStr(AddDayCount) {
-                var dd = new Date();
-                dd.setDate(dd.getDate()+AddDayCount);//获取AddDayCount天后的日期
-                var m = dd.getMonth()+1;//获取当前月份的日期
-                var d = dd.getDate();
-                return "("+m+"月"+d+"日) ";
-            }
-
-            $('.select-station2 .icon-travel2').bind('click', function(){
-                var start = $('.select-station2 .start').val();
-                if($('.select-station2 .tostation').val()){
-                    $('.select-station2 .start').val($('.select-station2 .tostation').val());
-                }else{
-                    $('.select-station2 .start').val('');
-                    $('.select-station2 .start').attr('placeholder','输入您所在的城市和地址');
-                }
-                $('.select-station2 .tostation').val(start);
-            });
-
-            $('.time').bind('click', function(){
-                if($(this).hasClass('time-active')){
-                    $(this).removeClass('time-active');
-                }else{
-                    $(this).addClass('time-active');
-                }
-                return false;
-            });
-
-        })();
-    </script>
 </body>
 </html>
