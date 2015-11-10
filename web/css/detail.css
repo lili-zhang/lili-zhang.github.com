@@ -87,6 +87,9 @@
     font-size: 1.4rem;
     background: none;
 }
+#datetime {
+    width: 140px;
+}
 #treelist {
     display: none;
 }
@@ -734,4 +737,36 @@ h3 {
 }
 .bg .login {
     margin: 50px 5px 10px;
+}
+.mbsc-mobiscroll .dwfl {
+    padding: 3em .25em 1em;
+}
+@media screen and (max-width: 320px) {
+    .dwfl {
+        min-width: 58px!important;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 384px) {
+    .dwfl {
+        min-width: 60px!important;
+    }
+}
+@media screen and (min-width: 400px) {
+    .dwfl {
+        min-width: 70px!important;
+    }
+}
+.mbsc-mobiscroll .dwl {
+    font-size: 1.6rem;
+    color: #ff8500;
+}
+.dwhl .dwl {
+    display: block;
+}
+.mbsc-mobiscroll .dwb {
+    color: #ff8500;
+}
+.mbsc-mobiscroll .dwwol {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
