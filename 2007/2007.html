@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta name="description" content=""/>
+    <meta name="keywords"  content=""/>
+    <title>2007级软件技术微信群</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.fn.fullpage({
+                slidesColor: ['#26acde', '#62d39d', '#ff9a6d', '#fb766e'],
+                navigation: true
+            });
+            var sound = new Audio("images/audio.mp3");
+            sound.loop = true;
+            var sound = null;
+            $('#sound').bind('click', function(){
+                if(sound == null){
+                    sound = new Audio("images/audio.mp3");
+                    sound.loop = true;
+                }
+                if($(this).hasClass('pause')){
+                    sound.pause();
+                }else{
+                    sound.play();
+                }
+                $(this).toggleClass('pause');
+            })
+        });
+    </script>
+</head>
+<body>
+    <div style="display: none;"><img src="images/2007.jpg"></div>
+    <div class="section section01">
+        <div class="text">
+            <div class="text01">
+                那些年，我们一起走过的岁月
+            </div>
+            <div class="text02">
+                待卿而至  ·  等你而来
+            </div>
+            <div class="rotate-face">
+                <div class="avatar">
+                    <img width="100" height="100" src="images/avatar.jpg" alt="软件0701">
+                </div>
+            </div>
+            <div class="face-shdow"></div>
+        </div>
+    </div>
+    <div class="section section02">
+        <div class="time-line">
+            <div class="time_bar"></div>
+            <div class="clock">
+                <div class="clock_inner"></div>
+                <div class="hour"></div>
+                <div class="min"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section03">
+        <div class="slide img01">
+        </div>
+        <div class="slide img02">
+        </div>
+        <div class="slide img03">
+        </div>
+        <div class="slide img04">
+        </div>
+    </div>
+    <div class="section section04">
+        <div class="text">
+            <h3>三年同窗</h3>
+            <p>难忘的岁月，片片段段，总有一些值得珍藏，<br/>流逝的时光，除了你脸上的笑容，还有......</p>
+            <div class="rotate-face">
+                <div class="avatar">
+                    <img width="100" height="100" src="images/avatar.jpg" alt="软件0701">
+                </div>
+            </div>
+            <p>5年了，你又在何方？</p>
+            <p><img src="images/code.jpg" alt="2007级软件技术微信群" title="2007级软件技术微信群"/></p>
+            <p>2007级软件技术微信群</p>
+        </div>
+    </div>
+    <div id="arrow"></div>
+    <div id="sound"></div>
+</body>
+</html>
