@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>搜索</title>
+    <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon"/>
+    <link href="../../../css/v1.50/search.css?v=$VERSION" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="search">
+        <form action="" method="">
+            <label>
+                <input id="search" type="text" name="keyword" value="" placeholder="" autocomplete="off"/>
+                <input class="keyword" type="hidden" name="keyword" value=""/>
+                <i class="btn-clear hidden" id="btn-clear"></i>
+                <ul id="suggest"></ul>
+            </label>
+            <button type="submit">搜索</button>
+        </form>
+        <div class="search-result">
+            没有搜索到相关内容
+        </div>
+    </div>
+    <div class="mod">
+        <div class="mod-title">
+            <h2>为您推荐</h2>
+        </div>
+        <ul class="col-list">
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video1.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖高能综艺咖</h4>
+                            <strong>30:20</strong>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video2.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            <strong>30:20</strong>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video1.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            <strong>30:20</strong>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video2.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            <strong>30:20</strong>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video1.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            <strong>30:20</strong>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video2.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            <strong>30:20</strong>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <!-- 竖图样式，暂时不用
+        <ul class="col-list col-list-three">
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="video-thumb">
+                    <a href="#">
+                        <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video3.jpg"/>
+                        <div class="video-title">
+                            <h4>高能综艺咖</h4>
+                            金融女转行做模特
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        -->
+    </div>
+    <script>
+        var suggest = {
+            base: '',
+            res: '',
+            param: '&v=6.3.10.0&apiSkin=&rfrom=pnlk_bh2t_4038',
+            url: 'http://localhost/html/cbc-client/android/js/v1.50/tpl/search.json?keyword=',
+            size: '5'
+        };
+    </script>
+    <script data-main="../../../js/v1.50/build/search.js?v=$VERSION" src="../../../js/v1.50/build/require.js?v=$VERSION"></script>
+</body>
+</html>

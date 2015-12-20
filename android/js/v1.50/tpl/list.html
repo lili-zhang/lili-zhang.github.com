@@ -1,0 +1,14 @@
+{{each list as video i}}
+<li>
+    <div class="video-thumb">
+        <a href="#">
+            <i class="{{video.charge}}">付费</i>
+            <img class="video-img" src="../../../images/v1.50/default.png" data-src="../../../images/v1.50/video2.jpg">
+            <div class="video-title">
+                <h4>{{video.videoname}}</h4>
+                <strong>{{video.duration}}</strong>
+            </div>
+        </a>
+    </div>
+</li>
+{{/each}}
