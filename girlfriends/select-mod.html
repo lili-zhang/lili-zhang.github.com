@@ -11,179 +11,60 @@
 <body>
     <div class="section three-section">
         <div class="title">选择模版</div>
-        <ul class="mod-list">
-            <li>
-                <label data-src="images/mod01.png">
-                    <input type="radio" name="mod" value="1"/>
-                    <img src="images/img01.png"/>
-                    <p>模版1</p>
-                </label>
-            </li>
-            <li>
-                <label data-src="images/mod02.png">
-                    <input type="radio" name="mod" value="2"/>
-                    <img src="images/img01.png"/>
-                    <p>模版2</p>
-                </label>
-            </li>
-            <li>
-                <label data-src="images/mod01.png">
-                    <input type="radio" name="mod" value="3"/>
-                    <img src="images/img01.png"/>
-                    <p>模版3</p>
-                </label>
-            </li>
-            <li>
-                <label data-src="images/mod02.png">
-                    <input type="radio" name="mod" value="4"/>
-                    <img src="images/img01.png"/>
-                    <p>模版4</p>
-                </label>
-            </li>
-            <li>
-                <label data-src="images/mod01.png">
-                    <input type="radio" name="mod" value="5"/>
-                    <img src="images/img01.png"/>
-                    <p>模版5</p>
-                </label>
-            </li>
-            <li>
-                <label data-src="images/mod02.png">
-                    <input type="radio" name="mod" value="6"/>
-                    <img src="images/img01.png"/>
-                    <p>模版6</p>
-                </label>
-            </li>
-        </ul>
+        <form action="upload-img.html" method="" name="selectForm">
+            <ul class="mod-list">
+                <li>
+                    <label data-src="images/mod01.png">
+                        <input type="radio" name="mod" value="images/mod01.png"/>
+                        <img src="images/img01.png"/>
+                        <p>模版1</p>
+                    </label>
+                </li>
+                <li>
+                    <label data-src="images/mod02.png">
+                        <input type="radio" name="mod" value="images/mod02.png"/>
+                        <img src="images/img01.png"/>
+                        <p>模版2</p>
+                    </label>
+                </li>
+                <li>
+                    <label data-src="images/mod01.png">
+                        <input type="radio" name="mod" value="images/mod03.png"/>
+                        <img src="images/img01.png"/>
+                        <p>模版3</p>
+                    </label>
+                </li>
+                <li>
+                    <label data-src="images/mod02.png">
+                        <input type="radio" name="mod" value="images/mod04.png"/>
+                        <img src="images/img01.png"/>
+                        <p>模版4</p>
+                    </label>
+                </li>
+                <li>
+                    <label data-src="images/mod01.png">
+                        <input type="radio" name="mod" value="images/mod05.png"/>
+                        <img src="images/img01.png"/>
+                        <p>模版5</p>
+                    </label>
+                </li>
+                <li>
+                    <label data-src="images/mod02.png">
+                        <input type="radio" name="mod" value="images/mod06.png"/>
+                        <img src="images/img01.png"/>
+                        <p>模版6</p>
+                    </label>
+                </li>
+            </ul>
+        </form>
         <a class="go-home" href="index.html">&lt; 首页</a>
     </div>
-    <div class="section four-section">
-        <div class="img"></div>
-        <label class="file01">
-            <input type="file" name="girl01" id="file">
-        </label>
-        <label class="file02">
-            <input type="file" name="girl02" id="file02">
-        </label>
-        <div id="view"></div>
-        <div id="clipArea">
-            <div class="txt">可手指操作</div>
-        </div>
-        <button id="close">关闭</button>
-        <button id="clipBtn">使用</button>
-        <div id="view02"></div>
-        <div id="clipArea02">
-            <div class="txt">可手指操作</div>
-        </div>
-        <button id="clipBtn02">使用</button>
-        <a href="javascript:;">&lt; 选择模版</a>
-        <div class="bottom">
-            <p><img src="images/oparate.png" width="180"/></p>
-            输入闺蜜名字<input type="text" name="username"/>
-            <button type="submit">完成</button>
-        </div>
-    </div>
-    <div class="section five-section">
-        <img src="images/loading-fenxi.png"/>
-    </div>
     <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/iscroll-zoom.js"></script>
-    <script src="js/hammer.js"></script>
-    <script src="js/lrz.all.bundle.js"></script>
-    <script src="js/jquery.photoClip.min.js"></script>
     <script>
         (function(){
 
             $(".three-section .mod-list label").bind('click', function(){
-                $(".three-section").hide();
-                $(".four-section").show();
-                $(".four-section .img").css({"display":"block", "background-image": "url(" + $(this).attr("data-src") + ")"});
-            });
-
-            $(".four-section a").bind('click', function(){
-                $(".four-section").hide();
-                $(".three-section").show();
-            });
-
-            $(".four-section .bottom button").bind('click', function(){
-                $(".four-section").hide();
-                $(".five-section").show();
-                var timer = setTimeout(function(){
-                    $.ajax({
-                        url: "data.json",
-                        dataType: 'json',
-                        timeout: 1000,
-                        success: function(data, status, xhr){
-                            if(data.status ==='ok'){
-                                window.location.href = "result01.html";
-                            }
-                        },
-                        error: function(xhr, errType, err){
-                            if(errType === 'timeout')
-                                alert("获取内容超时，请稍候重新获取！");
-                            else
-                                alert("获取失败，请您稍后重试！");
-                        }
-                    });
-                    clearTimeout(timer);
-                }, 3000);
-            });
-
-            //图片处理
-            $('#file').bind('click',function(){
-                $("#clipArea").show();
-                $("#clipBtn").show();
-                $("#close").show();
-            });
-            $('#clipBtn').bind('click',function(){
-                $("#clipArea").hide();
-                $("#clipBtn").hide();
-                $("#close").hide();
-                $(".file01").css("background","none");
-            });
-            var clipArea = new bjj.PhotoClip("#clipArea", {
-                size: [260, 260],
-                outputSize: [640, 640],
-                file: "#file",
-                view: "#view",
-                ok: "#clipBtn",
-                loadStart: function() {
-                    //console.log("照片读取中");
-                },
-                loadComplete: function() {
-                    //console.log("照片读取完成");
-                },
-                clipFinish: function(dataURL) {
-                    //console.log(dataURL);
-                }
-            });
-
-            $('#file02').bind('click',function(){
-                $("#clipArea02").show();
-                $("#clipBtn02").show();
-                $("#close").show();
-            });
-            $('#clipBtn02').bind('click',function(){
-                $("#clipArea02").hide();
-                $("#clipBtn02").hide();
-                $("#close").hide();
-                $(".file02").css("background","none");
-            });
-            var clipArea2 = new bjj.PhotoClip("#clipArea02", {
-                size: [260, 260],
-                outputSize: [640, 640],
-                file: "#file02",
-                view: "#view02",
-                ok: "#clipBtn02",
-                loadStart: function() {
-                    //console.log("照片读取中");
-                },
-                loadComplete: function() {
-                    //console.log("照片读取完成");
-                },
-                clipFinish: function(dataURL) {
-                    //console.log(dataURL);
-                }
+                $("form[name='selectForm']").submit();
             });
 
         })();
