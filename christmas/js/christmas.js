@@ -1,0 +1,1 @@
+require(["common"],function(){require(["jquery"],function(e){e(function(){var t=document.getElementById("music-audio");e("#sound").bind("click",function(){e(this).hasClass("pause")?t.play():t.pause(),e(this).toggleClass("pause")})})})}),define("christmas",function(){});
